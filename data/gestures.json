@@ -1,0 +1,162 @@
+{
+  "HELLO": {
+    "description": "Open hand waves near head",
+    "features": {
+      "hand_movement": 0.3,
+      "hand_shape": "open",
+      "hand_height": 0.3,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "THANK YOU": {
+    "description": "Hand moves from chin outward",
+    "features": {
+      "hand_movement": 0.4,
+      "hand_shape": "open",
+      "hand_height": 0.35,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "YES": {
+    "description": "Fist nods up and down",
+    "features": {
+      "hand_movement": 0.2,
+      "hand_shape": "fist",
+      "hand_height": 0.4,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "NO": {
+    "description": "Index and middle finger tap thumb",
+    "features": {
+      "hand_movement": 0.15,
+      "hand_shape": "peace",
+      "hand_height": 0.4,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "PLEASE": {
+    "description": "Hand circles on chest",
+    "features": {
+      "hand_movement": 0.35,
+      "hand_shape": "open",
+      "hand_height": 0.5,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "SORRY": {
+    "description": "Fist circles on chest",
+    "features": {
+      "hand_movement": 0.3,
+      "hand_shape": "fist",
+      "hand_height": 0.5,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "HELP": {
+    "description": "Fist on flat palm, both move up",
+    "features": {
+      "hand_movement": 0.25,
+      "hand_shape": "fist",
+      "hand_height": 0.45,
+      "two_hands": true,
+      "hand_distance": 0.15
+    }
+  },
+  "GOOD": {
+    "description": "Hand moves from chin down",
+    "features": {
+      "hand_movement": 0.35,
+      "hand_shape": "open",
+      "hand_height": 0.4,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "BAD": {
+    "description": "Hand moves from chin down and away",
+    "features": {
+      "hand_movement": 0.4,
+      "hand_shape": "open",
+      "hand_height": 0.35,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "LOVE": {
+    "description": "Crossed fists on chest",
+    "features": {
+      "hand_movement": 0.1,
+      "hand_shape": "fist",
+      "hand_height": 0.5,
+      "two_hands": true,
+      "hand_distance": 0.1
+    }
+  },
+  "NAME": {
+    "description": "Two fingers tap on other two fingers",
+    "features": {
+      "hand_movement": 0.15,
+      "hand_shape": "peace",
+      "hand_height": 0.45,
+      "two_hands": true,
+      "hand_distance": 0.2
+    }
+  },
+  "MY": {
+    "description": "Flat hand on chest",
+    "features": {
+      "hand_movement": 0.1,
+      "hand_shape": "open",
+      "hand_height": 0.5,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "YOU": {
+    "description": "Point finger forward",
+    "features": {
+      "hand_movement": 0.1,
+      "hand_shape": "point",
+      "hand_height": 0.45,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "WHAT": {
+    "description": "Open hands move side to side",
+    "features": {
+      "hand_movement": 0.3,
+      "hand_shape": "open",
+      "hand_height": 0.45,
+      "two_hands": true,
+      "hand_distance": 0.3
+    }
+  },
+  "WHERE": {
+    "description": "Point finger waves side to side",
+    "features": {
+      "hand_movement": 0.25,
+      "hand_shape": "point",
+      "hand_height": 0.45,
+      "two_hands": false,
+      "hand_distance": 0
+    }
+  },
+  "HOW": {
+    "description": "Fists rotate together",
+    "features": {
+      "hand_movement": 0.2,
+      "hand_shape": "fist",
+      "hand_height": 0.5,
+      "two_hands": true,
+      "hand_distance": 0.15
+    }
+  }
+}
