@@ -6,7 +6,9 @@
       "hand_shape": "open",
       "hand_height": 0.3,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.3
     }
   },
   "THANK YOU": {
@@ -16,7 +18,9 @@
       "hand_shape": "open",
       "hand_height": 0.35,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.4
     }
   },
   "YES": {
@@ -26,7 +30,9 @@
       "hand_shape": "fist",
       "hand_height": 0.4,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.2
     }
   },
   "NO": {
@@ -36,7 +42,9 @@
       "hand_shape": "peace",
       "hand_height": 0.4,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.15
     }
   },
   "PLEASE": {
@@ -46,7 +54,9 @@
       "hand_shape": "open",
       "hand_height": 0.5,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": null,
+      "hand_velocity": 0.35
     }
   },
   "SORRY": {
@@ -56,7 +66,9 @@
       "hand_shape": "fist",
       "hand_height": 0.5,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": null,
+      "hand_velocity": 0.3
     }
   },
   "HELP": {
@@ -66,7 +78,9 @@
       "hand_shape": "fist",
       "hand_height": 0.45,
       "two_hands": true,
-      "hand_distance": 0.15
+      "hand_distance": 0.15,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.25
     }
   },
   "GOOD": {
@@ -76,7 +90,9 @@
       "hand_shape": "open",
       "hand_height": 0.4,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.35
     }
   },
   "BAD": {
@@ -86,7 +102,9 @@
       "hand_shape": "open",
       "hand_height": 0.35,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.4
     }
   },
   "LOVE": {
@@ -96,7 +114,9 @@
       "hand_shape": "fist",
       "hand_height": 0.5,
       "two_hands": true,
-      "hand_distance": 0.1
+      "hand_distance": 0.1,
+      "movement_direction": null,
+      "hand_velocity": 0.1
     }
   },
   "NAME": {
@@ -106,7 +126,9 @@
       "hand_shape": "peace",
       "hand_height": 0.45,
       "two_hands": true,
-      "hand_distance": 0.2
+      "hand_distance": 0.2,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.15
     }
   },
   "MY": {
@@ -116,7 +138,9 @@
       "hand_shape": "open",
       "hand_height": 0.5,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": null,
+      "hand_velocity": 0.1
     }
   },
   "YOU": {
@@ -126,7 +150,9 @@
       "hand_shape": "point",
       "hand_height": 0.45,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.1
     }
   },
   "WHAT": {
@@ -136,7 +162,9 @@
       "hand_shape": "open",
       "hand_height": 0.45,
       "two_hands": true,
-      "hand_distance": 0.3
+      "hand_distance": 0.3,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.3
     }
   },
   "WHERE": {
@@ -146,7 +174,9 @@
       "hand_shape": "point",
       "hand_height": 0.45,
       "two_hands": false,
-      "hand_distance": 0
+      "hand_distance": 0,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.25
     }
   },
   "HOW": {
@@ -156,7 +186,57 @@
       "hand_shape": "fist",
       "hand_height": 0.5,
       "two_hands": true,
-      "hand_distance": 0.15
+      "hand_distance": 0.15,
+      "movement_direction": null,
+      "hand_velocity": 0.2
+    }
+  },
+  "STOP": {
+    "description": "Open hand raised, palm forward",
+    "features": {
+      "hand_movement": 0.1,
+      "hand_shape": "open",
+      "hand_height": 0.35,
+      "two_hands": false,
+      "hand_distance": 0,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.15
+    }
+  },
+  "GO": {
+    "description": "Point fingers move forward",
+    "features": {
+      "hand_movement": 0.3,
+      "hand_shape": "point",
+      "hand_height": 0.45,
+      "two_hands": false,
+      "hand_distance": 0,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.3
+    }
+  },
+  "COME": {
+    "description": "Hand beckons toward body",
+    "features": {
+      "hand_movement": 0.25,
+      "hand_shape": "open",
+      "hand_height": 0.45,
+      "two_hands": false,
+      "hand_distance": 0,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.25
+    }
+  },
+  "UNDERSTAND": {
+    "description": "Fist taps forehead",
+    "features": {
+      "hand_movement": 0.15,
+      "hand_shape": "fist",
+      "hand_height": 0.25,
+      "two_hands": false,
+      "hand_distance": 0,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.15
     }
   }
 }
