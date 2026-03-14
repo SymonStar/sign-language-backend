@@ -1,0 +1,1472 @@
+{
+  "CORRECT": {
+    "description": "Filipino Sign Language: CORRECT",
+    "features": {
+      "hand_movement": 34.917,
+      "hand_shape": "unknown",
+      "hand_height": 0.77,
+      "two_hands": false,
+      "hand_distance": 0.177,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "RED": {
+    "description": "Filipino Sign Language: RED",
+    "features": {
+      "hand_movement": 22.949,
+      "hand_shape": "unknown",
+      "hand_height": 0.633,
+      "two_hands": false,
+      "hand_distance": 0.176,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "HOW ARE YOU": {
+    "description": "Filipino Sign Language: HOW ARE YOU",
+    "features": {
+      "hand_movement": 42.921,
+      "hand_shape": "unknown",
+      "hand_height": 0.753,
+      "two_hands": false,
+      "hand_distance": 0.17,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "WINE": {
+    "description": "Filipino Sign Language: WINE",
+    "features": {
+      "hand_movement": 30.885,
+      "hand_shape": "unknown",
+      "hand_height": 0.581,
+      "two_hands": false,
+      "hand_distance": 0.298,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.017,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "UNDERSTAND": {
+    "description": "Filipino Sign Language: UNDERSTAND",
+    "features": {
+      "hand_movement": 25.778,
+      "hand_shape": "unknown",
+      "hand_height": 0.564,
+      "two_hands": false,
+      "hand_distance": 0.254,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "YOURE WELCOME": {
+    "description": "Filipino Sign Language: YOURE WELCOME",
+    "features": {
+      "hand_movement": 28.147,
+      "hand_shape": "unknown",
+      "hand_height": 0.765,
+      "two_hands": false,
+      "hand_distance": 0.202,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "BOY": {
+    "description": "Filipino Sign Language: BOY",
+    "features": {
+      "hand_movement": 39.16,
+      "hand_shape": "unknown",
+      "hand_height": 0.578,
+      "two_hands": false,
+      "hand_distance": 0.215,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.019,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "VIOLET": {
+    "description": "Filipino Sign Language: VIOLET",
+    "features": {
+      "hand_movement": 48.313,
+      "hand_shape": "unknown",
+      "hand_height": 0.667,
+      "two_hands": false,
+      "hand_distance": 0.177,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SATURDAY": {
+    "description": "Filipino Sign Language: SATURDAY",
+    "features": {
+      "hand_movement": 81.915,
+      "hand_shape": "unknown",
+      "hand_height": 0.606,
+      "two_hands": false,
+      "hand_distance": 0.286,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.022,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SEVEN": {
+    "description": "Filipino Sign Language: SEVEN",
+    "features": {
+      "hand_movement": 19.913,
+      "hand_shape": "unknown",
+      "hand_height": 0.616,
+      "two_hands": false,
+      "hand_distance": 0.279,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "NO": {
+    "description": "Filipino Sign Language: NO",
+    "features": {
+      "hand_movement": 20.747,
+      "hand_shape": "unknown",
+      "hand_height": 0.659,
+      "two_hands": false,
+      "hand_distance": 0.186,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "GREEN": {
+    "description": "Filipino Sign Language: GREEN",
+    "features": {
+      "hand_movement": 25.282,
+      "hand_shape": "unknown",
+      "hand_height": 0.6,
+      "two_hands": false,
+      "hand_distance": 0.209,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.017,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "DARK": {
+    "description": "Filipino Sign Language: DARK",
+    "features": {
+      "hand_movement": 91.739,
+      "hand_shape": "unknown",
+      "hand_height": 0.604,
+      "two_hands": false,
+      "hand_distance": 0.301,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.034,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "LIGHT": {
+    "description": "Filipino Sign Language: LIGHT",
+    "features": {
+      "hand_movement": 61.184,
+      "hand_shape": "unknown",
+      "hand_height": 0.58,
+      "two_hands": false,
+      "hand_distance": 0.26,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.024,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "MAY": {
+    "description": "Filipino Sign Language: MAY",
+    "features": {
+      "hand_movement": 50.73,
+      "hand_shape": "unknown",
+      "hand_height": 0.634,
+      "two_hands": false,
+      "hand_distance": 0.184,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "THURSDAY": {
+    "description": "Filipino Sign Language: THURSDAY",
+    "features": {
+      "hand_movement": 25.467,
+      "hand_shape": "unknown",
+      "hand_height": 0.58,
+      "two_hands": false,
+      "hand_distance": 0.382,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SHRIMP": {
+    "description": "Filipino Sign Language: SHRIMP",
+    "features": {
+      "hand_movement": 50.119,
+      "hand_shape": "unknown",
+      "hand_height": 0.738,
+      "two_hands": false,
+      "hand_distance": 0.158,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "APRIL": {
+    "description": "Filipino Sign Language: APRIL",
+    "features": {
+      "hand_movement": 47.489,
+      "hand_shape": "unknown",
+      "hand_height": 0.661,
+      "two_hands": false,
+      "hand_distance": 0.205,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.017,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "RICE": {
+    "description": "Filipino Sign Language: RICE",
+    "features": {
+      "hand_movement": 47.86,
+      "hand_shape": "unknown",
+      "hand_height": 0.711,
+      "two_hands": false,
+      "hand_distance": 0.209,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "YELLOW": {
+    "description": "Filipino Sign Language: YELLOW",
+    "features": {
+      "hand_movement": 24.194,
+      "hand_shape": "unknown",
+      "hand_height": 0.582,
+      "two_hands": false,
+      "hand_distance": 0.263,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.017,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "JULY": {
+    "description": "Filipino Sign Language: JULY",
+    "features": {
+      "hand_movement": 48.269,
+      "hand_shape": "unknown",
+      "hand_height": 0.605,
+      "two_hands": false,
+      "hand_distance": 0.183,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "HELLO": {
+    "description": "Filipino Sign Language: HELLO",
+    "features": {
+      "hand_movement": 29.23,
+      "hand_shape": "unknown",
+      "hand_height": 0.558,
+      "two_hands": false,
+      "hand_distance": 0.222,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.019,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "AUNTIE": {
+    "description": "Filipino Sign Language: AUNTIE",
+    "features": {
+      "hand_movement": 22.205,
+      "hand_shape": "unknown",
+      "hand_height": 0.556,
+      "two_hands": false,
+      "hand_distance": 0.231,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SUGAR": {
+    "description": "Filipino Sign Language: SUGAR",
+    "features": {
+      "hand_movement": 23.475,
+      "hand_shape": "unknown",
+      "hand_height": 0.659,
+      "two_hands": false,
+      "hand_distance": 0.288,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "GOOD AFTERNOON": {
+    "description": "Filipino Sign Language: GOOD AFTERNOON",
+    "features": {
+      "hand_movement": 25.764,
+      "hand_shape": "unknown",
+      "hand_height": 0.623,
+      "two_hands": false,
+      "hand_distance": 0.185,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "CHICKEN": {
+    "description": "Filipino Sign Language: CHICKEN",
+    "features": {
+      "hand_movement": 34.527,
+      "hand_shape": "unknown",
+      "hand_height": 0.489,
+      "two_hands": false,
+      "hand_distance": 0.393,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "YESTERDAY": {
+    "description": "Filipino Sign Language: YESTERDAY",
+    "features": {
+      "hand_movement": 27.613,
+      "hand_shape": "unknown",
+      "hand_height": 0.555,
+      "two_hands": false,
+      "hand_distance": 0.205,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.017,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "LONGANISA": {
+    "description": "Filipino Sign Language: LONGANISA",
+    "features": {
+      "hand_movement": 42.169,
+      "hand_shape": "unknown",
+      "hand_height": 0.646,
+      "two_hands": false,
+      "hand_distance": 0.242,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "WEELCHAIR PERSON": {
+    "description": "Filipino Sign Language: WEELCHAIR PERSON",
+    "features": {
+      "hand_movement": 31.402,
+      "hand_shape": "unknown",
+      "hand_height": 0.85,
+      "two_hands": false,
+      "hand_distance": 0.366,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "MOTHER": {
+    "description": "Filipino Sign Language: MOTHER",
+    "features": {
+      "hand_movement": 27.708,
+      "hand_shape": "unknown",
+      "hand_height": 0.6,
+      "two_hands": false,
+      "hand_distance": 0.164,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.019,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "CRAB": {
+    "description": "Filipino Sign Language: CRAB",
+    "features": {
+      "hand_movement": 42.628,
+      "hand_shape": "unknown",
+      "hand_height": 0.711,
+      "two_hands": false,
+      "hand_distance": 0.217,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "UNCLE": {
+    "description": "Filipino Sign Language: UNCLE",
+    "features": {
+      "hand_movement": 24.435,
+      "hand_shape": "unknown",
+      "hand_height": 0.494,
+      "two_hands": false,
+      "hand_distance": 0.348,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "TEN": {
+    "description": "Filipino Sign Language: TEN",
+    "features": {
+      "hand_movement": 22.272,
+      "hand_shape": "unknown",
+      "hand_height": 0.65,
+      "two_hands": false,
+      "hand_distance": 0.218,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "PARENTS": {
+    "description": "Filipino Sign Language: PARENTS",
+    "features": {
+      "hand_movement": 33.741,
+      "hand_shape": "unknown",
+      "hand_height": 0.507,
+      "two_hands": false,
+      "hand_distance": 0.181,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.02,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "NINE ": {
+    "description": "Filipino Sign Language: NINE ",
+    "features": {
+      "hand_movement": 20.296,
+      "hand_shape": "unknown",
+      "hand_height": 0.602,
+      "two_hands": false,
+      "hand_distance": 0.262,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "EGG": {
+    "description": "Filipino Sign Language: EGG",
+    "features": {
+      "hand_movement": 57.178,
+      "hand_shape": "unknown",
+      "hand_height": 0.702,
+      "two_hands": false,
+      "hand_distance": 0.232,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.019,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "HARD OF HEARING": {
+    "description": "Filipino Sign Language: HARD OF HEARING",
+    "features": {
+      "hand_movement": 29.416,
+      "hand_shape": "unknown",
+      "hand_height": 0.727,
+      "two_hands": false,
+      "hand_distance": 0.12,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.02,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "BROWN": {
+    "description": "Filipino Sign Language: BROWN",
+    "features": {
+      "hand_movement": 57.843,
+      "hand_shape": "unknown",
+      "hand_height": 0.698,
+      "two_hands": false,
+      "hand_distance": 0.24,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "DAUGHTER": {
+    "description": "Filipino Sign Language: DAUGHTER",
+    "features": {
+      "hand_movement": 51.136,
+      "hand_shape": "unknown",
+      "hand_height": 0.794,
+      "two_hands": false,
+      "hand_distance": 0.243,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "WEDNESDAY": {
+    "description": "Filipino Sign Language: WEDNESDAY",
+    "features": {
+      "hand_movement": 28.963,
+      "hand_shape": "unknown",
+      "hand_height": 0.635,
+      "two_hands": false,
+      "hand_distance": 0.3,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "TUESDAY": {
+    "description": "Filipino Sign Language: TUESDAY",
+    "features": {
+      "hand_movement": 29.121,
+      "hand_shape": "unknown",
+      "hand_height": 0.591,
+      "two_hands": false,
+      "hand_distance": 0.182,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "GOOD MORNING": {
+    "description": "Filipino Sign Language: GOOD MORNING",
+    "features": {
+      "hand_movement": 23.411,
+      "hand_shape": "unknown",
+      "hand_height": 0.64,
+      "two_hands": false,
+      "hand_distance": 0.206,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SPAGHETTI": {
+    "description": "Filipino Sign Language: SPAGHETTI",
+    "features": {
+      "hand_movement": 60.307,
+      "hand_shape": "unknown",
+      "hand_height": 0.629,
+      "two_hands": false,
+      "hand_distance": 0.269,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "MAN": {
+    "description": "Filipino Sign Language: MAN",
+    "features": {
+      "hand_movement": 34.147,
+      "hand_shape": "unknown",
+      "hand_height": 0.388,
+      "two_hands": false,
+      "hand_distance": 0.322,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SUNDAY": {
+    "description": "Filipino Sign Language: SUNDAY",
+    "features": {
+      "hand_movement": 78.061,
+      "hand_shape": "unknown",
+      "hand_height": 0.639,
+      "two_hands": false,
+      "hand_distance": 0.254,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.021,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "FATHER": {
+    "description": "Filipino Sign Language: FATHER",
+    "features": {
+      "hand_movement": 36.213,
+      "hand_shape": "unknown",
+      "hand_height": 0.371,
+      "two_hands": false,
+      "hand_distance": 0.336,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.021,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "DEAF BLIND": {
+    "description": "Filipino Sign Language: DEAF BLIND",
+    "features": {
+      "hand_movement": 22.708,
+      "hand_shape": "unknown",
+      "hand_height": 0.557,
+      "two_hands": false,
+      "hand_distance": 0.248,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "IM FINE": {
+    "description": "Filipino Sign Language: IM FINE",
+    "features": {
+      "hand_movement": 18.346,
+      "hand_shape": "unknown",
+      "hand_height": 0.766,
+      "two_hands": false,
+      "hand_distance": 0.174,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "WRONG": {
+    "description": "Filipino Sign Language: WRONG",
+    "features": {
+      "hand_movement": 20.909,
+      "hand_shape": "unknown",
+      "hand_height": 0.654,
+      "two_hands": false,
+      "hand_distance": 0.167,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "THREE": {
+    "description": "Filipino Sign Language: THREE",
+    "features": {
+      "hand_movement": 16.51,
+      "hand_shape": "unknown",
+      "hand_height": 0.672,
+      "two_hands": false,
+      "hand_distance": 0.331,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "COLD": {
+    "description": "Filipino Sign Language: COLD",
+    "features": {
+      "hand_movement": 54.234,
+      "hand_shape": "unknown",
+      "hand_height": 0.648,
+      "two_hands": false,
+      "hand_distance": 0.254,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "GOOD EVENING": {
+    "description": "Filipino Sign Language: GOOD EVENING",
+    "features": {
+      "hand_movement": 24.42,
+      "hand_shape": "unknown",
+      "hand_height": 0.646,
+      "two_hands": false,
+      "hand_distance": 0.114,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.01,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "EIGHT": {
+    "description": "Filipino Sign Language: EIGHT",
+    "features": {
+      "hand_movement": 21.237,
+      "hand_shape": "unknown",
+      "hand_height": 0.616,
+      "two_hands": false,
+      "hand_distance": 0.229,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "GIRL": {
+    "description": "Filipino Sign Language: GIRL",
+    "features": {
+      "hand_movement": 25.905,
+      "hand_shape": "unknown",
+      "hand_height": 0.631,
+      "two_hands": false,
+      "hand_distance": 0.155,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "ORANGE": {
+    "description": "Filipino Sign Language: ORANGE",
+    "features": {
+      "hand_movement": 17.979,
+      "hand_shape": "unknown",
+      "hand_height": 0.561,
+      "two_hands": false,
+      "hand_distance": 0.204,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "MARRIED": {
+    "description": "Filipino Sign Language: MARRIED",
+    "features": {
+      "hand_movement": 47.088,
+      "hand_shape": "unknown",
+      "hand_height": 0.746,
+      "two_hands": false,
+      "hand_distance": 0.196,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.025,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SON": {
+    "description": "Filipino Sign Language: SON",
+    "features": {
+      "hand_movement": 65.532,
+      "hand_shape": "unknown",
+      "hand_height": 0.764,
+      "two_hands": false,
+      "hand_distance": 0.318,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.022,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "DECEMBER": {
+    "description": "Filipino Sign Language: DECEMBER",
+    "features": {
+      "hand_movement": 49.146,
+      "hand_shape": "unknown",
+      "hand_height": 0.625,
+      "two_hands": false,
+      "hand_distance": 0.206,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "DEAF": {
+    "description": "Filipino Sign Language: DEAF",
+    "features": {
+      "hand_movement": 23.018,
+      "hand_shape": "unknown",
+      "hand_height": 0.578,
+      "two_hands": false,
+      "hand_distance": 0.249,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "FEBRUARY": {
+    "description": "Filipino Sign Language: FEBRUARY",
+    "features": {
+      "hand_movement": 49.245,
+      "hand_shape": "unknown",
+      "hand_height": 0.66,
+      "two_hands": false,
+      "hand_distance": 0.218,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "FIVE": {
+    "description": "Filipino Sign Language: FIVE",
+    "features": {
+      "hand_movement": 20.074,
+      "hand_shape": "unknown",
+      "hand_height": 0.664,
+      "two_hands": false,
+      "hand_distance": 0.206,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "BEER": {
+    "description": "Filipino Sign Language: BEER",
+    "features": {
+      "hand_movement": 30.41,
+      "hand_shape": "unknown",
+      "hand_height": 0.535,
+      "two_hands": false,
+      "hand_distance": 0.302,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.017,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "GRAY": {
+    "description": "Filipino Sign Language: GRAY",
+    "features": {
+      "hand_movement": 39.924,
+      "hand_shape": "unknown",
+      "hand_height": 0.74,
+      "two_hands": false,
+      "hand_distance": 0.131,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "NOVEMBER": {
+    "description": "Filipino Sign Language: NOVEMBER",
+    "features": {
+      "hand_movement": 45.545,
+      "hand_shape": "unknown",
+      "hand_height": 0.633,
+      "two_hands": false,
+      "hand_distance": 0.195,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "THANK YOU": {
+    "description": "Filipino Sign Language: THANK YOU",
+    "features": {
+      "hand_movement": 45.443,
+      "hand_shape": "unknown",
+      "hand_height": 0.701,
+      "two_hands": false,
+      "hand_distance": 0.214,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SEPTEMBER": {
+    "description": "Filipino Sign Language: SEPTEMBER",
+    "features": {
+      "hand_movement": 46.759,
+      "hand_shape": "unknown",
+      "hand_height": 0.643,
+      "two_hands": false,
+      "hand_distance": 0.231,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.017,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "BLACK": {
+    "description": "Filipino Sign Language: BLACK",
+    "features": {
+      "hand_movement": 34.08,
+      "hand_shape": "unknown",
+      "hand_height": 0.414,
+      "two_hands": false,
+      "hand_distance": 0.25,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.021,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "PINK": {
+    "description": "Filipino Sign Language: PINK",
+    "features": {
+      "hand_movement": 28.561,
+      "hand_shape": "unknown",
+      "hand_height": 0.614,
+      "two_hands": false,
+      "hand_distance": 0.232,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "FRIDAY": {
+    "description": "Filipino Sign Language: FRIDAY",
+    "features": {
+      "hand_movement": 29.055,
+      "hand_shape": "unknown",
+      "hand_height": 0.627,
+      "two_hands": false,
+      "hand_distance": 0.197,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "NO SUGAR": {
+    "description": "Filipino Sign Language: NO SUGAR",
+    "features": {
+      "hand_movement": 24.833,
+      "hand_shape": "unknown",
+      "hand_height": 0.619,
+      "two_hands": false,
+      "hand_distance": 0.24,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "BLIND": {
+    "description": "Filipino Sign Language: BLIND",
+    "features": {
+      "hand_movement": 27.559,
+      "hand_shape": "unknown",
+      "hand_height": 0.567,
+      "two_hands": false,
+      "hand_distance": 0.262,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "COFFEE": {
+    "description": "Filipino Sign Language: COFFEE",
+    "features": {
+      "hand_movement": 43.618,
+      "hand_shape": "unknown",
+      "hand_height": 0.687,
+      "two_hands": false,
+      "hand_distance": 0.166,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "GRANDMOTHER": {
+    "description": "Filipino Sign Language: GRANDMOTHER",
+    "features": {
+      "hand_movement": 21.357,
+      "hand_shape": "unknown",
+      "hand_height": 0.568,
+      "two_hands": false,
+      "hand_distance": 0.198,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "DON\u2019T UNDERSTAND": {
+    "description": "Filipino Sign Language: DON\u2019T UNDERSTAND",
+    "features": {
+      "hand_movement": 25.639,
+      "hand_shape": "unknown",
+      "hand_height": 0.606,
+      "two_hands": false,
+      "hand_distance": 0.296,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "TWO": {
+    "description": "Filipino Sign Language: TWO",
+    "features": {
+      "hand_movement": 17.163,
+      "hand_shape": "unknown",
+      "hand_height": 0.677,
+      "two_hands": false,
+      "hand_distance": 0.217,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "MILK": {
+    "description": "Filipino Sign Language: MILK",
+    "features": {
+      "hand_movement": 21.694,
+      "hand_shape": "unknown",
+      "hand_height": 0.635,
+      "two_hands": false,
+      "hand_distance": 0.316,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "HOT": {
+    "description": "Filipino Sign Language: HOT",
+    "features": {
+      "hand_movement": 29.634,
+      "hand_shape": "unknown",
+      "hand_height": 0.673,
+      "two_hands": false,
+      "hand_distance": 0.328,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "KNOW": {
+    "description": "Filipino Sign Language: KNOW",
+    "features": {
+      "hand_movement": 28.816,
+      "hand_shape": "unknown",
+      "hand_height": 0.513,
+      "two_hands": false,
+      "hand_distance": 0.309,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "WHITE": {
+    "description": "Filipino Sign Language: WHITE",
+    "features": {
+      "hand_movement": 21.885,
+      "hand_shape": "unknown",
+      "hand_height": 0.708,
+      "two_hands": false,
+      "hand_distance": 0.205,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "GRANDFATHER": {
+    "description": "Filipino Sign Language: GRANDFATHER",
+    "features": {
+      "hand_movement": 33.126,
+      "hand_shape": "unknown",
+      "hand_height": 0.378,
+      "two_hands": false,
+      "hand_distance": 0.252,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.02,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "NICE TO MEET YOU": {
+    "description": "Filipino Sign Language: NICE TO MEET YOU",
+    "features": {
+      "hand_movement": 51.813,
+      "hand_shape": "unknown",
+      "hand_height": 0.731,
+      "two_hands": false,
+      "hand_distance": 0.157,
+      "movement_direction": "horizontal_left",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "AUGUST": {
+    "description": "Filipino Sign Language: AUGUST",
+    "features": {
+      "hand_movement": 49.003,
+      "hand_shape": "unknown",
+      "hand_height": 0.635,
+      "two_hands": false,
+      "hand_distance": 0.187,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "ONE": {
+    "description": "Filipino Sign Language: ONE",
+    "features": {
+      "hand_movement": 16.536,
+      "hand_shape": "unknown",
+      "hand_height": 0.668,
+      "two_hands": false,
+      "hand_distance": 0.251,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "YES": {
+    "description": "Filipino Sign Language: YES",
+    "features": {
+      "hand_movement": 22.674,
+      "hand_shape": "unknown",
+      "hand_height": 0.616,
+      "two_hands": false,
+      "hand_distance": 0.282,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "MEAT": {
+    "description": "Filipino Sign Language: MEAT",
+    "features": {
+      "hand_movement": 41.951,
+      "hand_shape": "unknown",
+      "hand_height": 0.68,
+      "two_hands": false,
+      "hand_distance": 0.197,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "JANUARY": {
+    "description": "Filipino Sign Language: JANUARY",
+    "features": {
+      "hand_movement": 51.324,
+      "hand_shape": "unknown",
+      "hand_height": 0.655,
+      "two_hands": false,
+      "hand_distance": 0.197,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "WOMAN": {
+    "description": "Filipino Sign Language: WOMAN",
+    "features": {
+      "hand_movement": 33.161,
+      "hand_shape": "unknown",
+      "hand_height": 0.465,
+      "two_hands": false,
+      "hand_distance": 0.234,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "MARCH": {
+    "description": "Filipino Sign Language: MARCH",
+    "features": {
+      "hand_movement": 47.132,
+      "hand_shape": "unknown",
+      "hand_height": 0.637,
+      "two_hands": false,
+      "hand_distance": 0.203,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "FAST": {
+    "description": "Filipino Sign Language: FAST",
+    "features": {
+      "hand_movement": 24.434,
+      "hand_shape": "unknown",
+      "hand_height": 0.641,
+      "two_hands": false,
+      "hand_distance": 0.154,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "MONDAY": {
+    "description": "Filipino Sign Language: MONDAY",
+    "features": {
+      "hand_movement": 34.997,
+      "hand_shape": "unknown",
+      "hand_height": 0.571,
+      "two_hands": false,
+      "hand_distance": 0.24,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "BREAD": {
+    "description": "Filipino Sign Language: BREAD",
+    "features": {
+      "hand_movement": 39.819,
+      "hand_shape": "unknown",
+      "hand_height": 0.736,
+      "two_hands": false,
+      "hand_distance": 0.146,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "TODAY": {
+    "description": "Filipino Sign Language: TODAY",
+    "features": {
+      "hand_movement": 42.45,
+      "hand_shape": "unknown",
+      "hand_height": 0.832,
+      "two_hands": false,
+      "hand_distance": 0.285,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "FOUR": {
+    "description": "Filipino Sign Language: FOUR",
+    "features": {
+      "hand_movement": 18.108,
+      "hand_shape": "unknown",
+      "hand_height": 0.674,
+      "two_hands": false,
+      "hand_distance": 0.183,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "COUSIN": {
+    "description": "Filipino Sign Language: COUSIN",
+    "features": {
+      "hand_movement": 29.505,
+      "hand_shape": "unknown",
+      "hand_height": 0.459,
+      "two_hands": false,
+      "hand_distance": 0.259,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.018,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "JUICE": {
+    "description": "Filipino Sign Language: JUICE",
+    "features": {
+      "hand_movement": 45.573,
+      "hand_shape": "unknown",
+      "hand_height": 0.669,
+      "two_hands": false,
+      "hand_distance": 0.241,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "OCTOBER": {
+    "description": "Filipino Sign Language: OCTOBER",
+    "features": {
+      "hand_movement": 42.316,
+      "hand_shape": "unknown",
+      "hand_height": 0.635,
+      "two_hands": false,
+      "hand_distance": 0.192,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "TEA": {
+    "description": "Filipino Sign Language: TEA",
+    "features": {
+      "hand_movement": 53.375,
+      "hand_shape": "unknown",
+      "hand_height": 0.647,
+      "two_hands": false,
+      "hand_distance": 0.269,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "FISH": {
+    "description": "Filipino Sign Language: FISH",
+    "features": {
+      "hand_movement": 21.535,
+      "hand_shape": "unknown",
+      "hand_height": 0.698,
+      "two_hands": false,
+      "hand_distance": 0.251,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.012,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "DON\u2019T KNOW": {
+    "description": "Filipino Sign Language: DON\u2019T KNOW",
+    "features": {
+      "hand_movement": 26.823,
+      "hand_shape": "unknown",
+      "hand_height": 0.561,
+      "two_hands": false,
+      "hand_distance": 0.231,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "JUNE": {
+    "description": "Filipino Sign Language: JUNE",
+    "features": {
+      "hand_movement": 46.607,
+      "hand_shape": "unknown",
+      "hand_height": 0.629,
+      "two_hands": false,
+      "hand_distance": 0.195,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.015,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SLOW": {
+    "description": "Filipino Sign Language: SLOW",
+    "features": {
+      "hand_movement": 40.085,
+      "hand_shape": "unknown",
+      "hand_height": 0.737,
+      "two_hands": false,
+      "hand_distance": 0.13,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.013,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SEE YOU TOMORROW": {
+    "description": "Filipino Sign Language: SEE YOU TOMORROW",
+    "features": {
+      "hand_movement": 30.727,
+      "hand_shape": "unknown",
+      "hand_height": 0.649,
+      "two_hands": false,
+      "hand_distance": 0.193,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.014,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "TOMORROW": {
+    "description": "Filipino Sign Language: TOMORROW",
+    "features": {
+      "hand_movement": 26.758,
+      "hand_shape": "unknown",
+      "hand_height": 0.603,
+      "two_hands": false,
+      "hand_distance": 0.255,
+      "movement_direction": "vertical_up",
+      "hand_velocity": 0.016,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "BLUE": {
+    "description": "Filipino Sign Language: BLUE",
+    "features": {
+      "hand_movement": 28.952,
+      "hand_shape": "unknown",
+      "hand_height": 0.576,
+      "two_hands": false,
+      "hand_distance": 0.318,
+      "movement_direction": "vertical_down",
+      "hand_velocity": 0.019,
+      "hand_location": null,
+      "face_present": true
+    }
+  },
+  "SIX": {
+    "description": "Filipino Sign Language: SIX",
+    "features": {
+      "hand_movement": 20.6,
+      "hand_shape": "unknown",
+      "hand_height": 0.612,
+      "two_hands": false,
+      "hand_distance": 0.287,
+      "movement_direction": "horizontal",
+      "hand_velocity": 0.011,
+      "hand_location": null,
+      "face_present": true
+    }
+  }
+}
