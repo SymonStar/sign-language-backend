@@ -52,7 +52,7 @@ class GestureRecognizer:
             score = self.advanced_compare(features, sign_data['features'])
             all_scores[sign_name] = score
             
-            if score > best_score and score > 0.6:
+            if score > best_score and score > 0.35:  # Lowered from 0.6 to 0.35
                 best_score = score
                 best_match = sign_name
         
@@ -352,9 +352,11 @@ class GestureRecognizer:
         
         # Velocity comparison
         if 'hand_velocity' in features2:
-            avg_velocity = np.mean([features1['hand_velocity']['left'], features1['hand_velocity']['right']])
+            # PWA sends small velocities (0.001-0.02), FSL has large hand_movement (20-30)
+            # Scale PWA velocity up by multiplying by 1000
+            avg_velocity = np.mean([features1['hand_velocity']['left'], features1['hand_velocity']['right']]) * 1000
             velocity_diff = abs(avg_velocity - features2.get('hand_movement', 0))
-            velocity_score = max(0, 1 - velocity_diff / 0.5)
+            velocity_score = max(0, 1 - velocity_diff / 30)  # Normalize by 30 instead of 0.5
             score += velocity_score * weights['velocity']
         
         # Height comparison
