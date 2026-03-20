@@ -46,13 +46,29 @@ class GestureRecognizer:
         
         best_match = None
         best_score = 0
+        all_scores = {}
         
         for sign_name, sign_data in self.database.items():
             score = self.advanced_compare(features, sign_data['features'])
+            all_scores[sign_name] = score
             
             if score > best_score and score > 0.6:
                 best_score = score
                 best_match = sign_name
+        
+        # DEBUG: Print incoming features and top 5 matches
+        print(f"\n📥 Incoming features:")
+        print(f"   hand_velocity: left={features['hand_velocity']['left']:.3f}, right={features['hand_velocity']['right']:.3f}")
+        print(f"   hand_height_avg: {features['hand_height_avg']:.3f}")
+        print(f"   two_hands: {features['two_hands']}")
+        print(f"   movement_direction: {features['movement_direction']}")
+        print(f"   hand_distance_avg: {features['hand_distance_avg']:.3f}")
+        
+        print(f"\n🔍 Top 5 matches:")
+        sorted_scores = sorted(all_scores.items(), key=lambda x: x[1], reverse=True)[:5]
+        for sign, score in sorted_scores:
+            print(f"   {sign}: {score:.3f}")
+        print(f"\n✅ Best match: {best_match} (score: {best_score:.3f})\n")
         
         return best_match
     
