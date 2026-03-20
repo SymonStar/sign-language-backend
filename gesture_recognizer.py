@@ -24,25 +24,46 @@ class GestureRecognizer:
         window_size = 15
         step_size = 10
         
+        window_scores = []  # Track (word, score) for each window
+        
         for i in range(0, len(frames) - window_size + 1, step_size):
             window = frames[i:i+window_size]
             
-            word = self.recognize_gesture(window)
+            word, score = self.recognize_gesture_with_score(window)
             
-            # Avoid duplicate consecutive words
-            if word and (not recognized_words or word != recognized_words[-1]):
-                recognized_words.append(word)
+            if word and score > 0.35:
+                window_scores.append((word, score))
+        
+        # Group consecutive same words and keep highest score
+        if window_scores:
+            current_word = window_scores[0][0]
+            current_max_score = window_scores[0][1]
+            
+            for word, score in window_scores[1:]:
+                if word == current_word:
+                    current_max_score = max(current_max_score, score)
+                else:
+                    # New word detected
+                    if current_max_score > 0.40:  # Only add if confident
+                        recognized_words.append(current_word)
+                    current_word = word
+                    current_max_score = score
+            
+            # Add last word
+            if current_max_score > 0.40:
+                recognized_words.append(current_word)
         
         if not recognized_words:
             recognized_words = ['HELLO']
         
         return recognized_words
     
-    def recognize_gesture(self, frames):
+    def recognize_gesture_with_score(self, frames):
+        """Returns (gesture_name, score) tuple"""
         features = self.extract_advanced_features(frames)
         
         if not features:
-            return None
+            return None, 0
         
         best_match = None
         best_score = 0
@@ -52,7 +73,7 @@ class GestureRecognizer:
             score = self.advanced_compare(features, sign_data['features'])
             all_scores[sign_name] = score
             
-            if score > best_score and score > 0.35:  # Lowered from 0.6 to 0.35
+            if score > best_score and score > 0.35:
                 best_score = score
                 best_match = sign_name
         
@@ -70,7 +91,7 @@ class GestureRecognizer:
             print(f"   {sign}: {score:.3f}")
         print(f"\n✅ Best match: {best_match} (score: {best_score:.3f})\n")
         
-        return best_match
+        return best_match, best_score
     
     def extract_advanced_features(self, frames):
         if not frames or len(frames) < 3:
