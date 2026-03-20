@@ -24,34 +24,14 @@ class GestureRecognizer:
         window_size = 15
         step_size = 10
         
-        window_scores = []  # Track (word, score) for each window
-        
         for i in range(0, len(frames) - window_size + 1, step_size):
             window = frames[i:i+window_size]
             
             word, score = self.recognize_gesture_with_score(window)
             
-            if word and score > 0.35:
-                window_scores.append((word, score))
-        
-        # Group consecutive same words and keep highest score
-        if window_scores:
-            current_word = window_scores[0][0]
-            current_max_score = window_scores[0][1]
-            
-            for word, score in window_scores[1:]:
-                if word == current_word:
-                    current_max_score = max(current_max_score, score)
-                else:
-                    # New word detected
-                    if current_max_score > 0.40:  # Only add if confident
-                        recognized_words.append(current_word)
-                    current_word = word
-                    current_max_score = score
-            
-            # Add last word
-            if current_max_score > 0.40:
-                recognized_words.append(current_word)
+            # Only add if confident and not duplicate
+            if word and score > 0.35 and (not recognized_words or word != recognized_words[-1]):
+                recognized_words.append(word)
         
         if not recognized_words:
             recognized_words = ['HELLO']
