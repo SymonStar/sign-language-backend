@@ -10,7 +10,7 @@ class Translator:
         else:
             self.client = None
             self.use_ai = False
-            print("⚠️  No GROQ_API_KEY found. Using simple translation.")
+            print("[WARN] No GROQ_API_KEY found. Using simple translation.")
     
     def translate_to_english(self, words):
         """Translate ASL word sequence to proper English"""
