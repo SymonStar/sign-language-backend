@@ -12,3 +12,5 @@ build/
 .venv
 venv/
 ENV/
+data/gesture_templates_v2.json
+data/fsl_skeletal_data.json
