@@ -36,13 +36,17 @@ class GestureRecognizerV2:
             dict: {'gesture': name, 'confidence': score, 'all_scores': {...}}
         """
         if not gesture_frames or len(gesture_frames) < 5:
+            print(f"[DEBUG] Too few frames: {len(gesture_frames) if gesture_frames else 0}")
             return {'gesture': None, 'confidence': 0, 'all_scores': {}}
         
         # Convert frames to feature vectors
         feature_sequence = self._frames_to_feature_vectors(gesture_frames)
         
         if feature_sequence is None or len(feature_sequence) == 0:
+            print(f"[DEBUG] No feature vectors extracted")
             return {'gesture': None, 'confidence': 0, 'all_scores': {}}
+        
+        print(f"[DEBUG] Processing {len(feature_sequence)} frames")
         
         # Compare against all templates
         scores = {}
@@ -65,11 +69,20 @@ class GestureRecognizerV2:
         if not scores:
             return {'gesture': None, 'confidence': 0, 'all_scores': {}}
         
+        # Get top 5 for debugging
+        top_5 = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:5]
+        print(f"[DEBUG] Top 5 matches:")
+        for gesture, score in top_5:
+            print(f"  {gesture}: {score:.3f}")
+        
         best_gesture = max(scores, key=scores.get)
         best_score = scores[best_gesture]
         
+        print(f"[DEBUG] Best: {best_gesture} ({best_score:.3f}), Threshold: {self.confidence_threshold}")
+        
         # Apply confidence threshold
         if best_score < self.confidence_threshold:
+            print(f"[DEBUG] Below threshold, rejecting")
             return {'gesture': None, 'confidence': best_score, 'all_scores': scores}
         
         return {
