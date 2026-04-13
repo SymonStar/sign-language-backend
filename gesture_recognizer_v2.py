@@ -142,8 +142,8 @@ class GestureRecognizerV2:
         normalized_distance = distance / (sequence_length + 1e-8)
         
         # Convert to similarity using exponential decay
-        # Typical distances range from 5-50, so we scale accordingly
-        similarity = np.exp(-normalized_distance / 10)
+        # Adjusted scaling factor from 10 to 15 for more lenient matching
+        similarity = np.exp(-normalized_distance / 15)
         
         return float(similarity)
     
