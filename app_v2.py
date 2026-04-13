@@ -12,11 +12,11 @@ CORS(app)
 # Initialize new architecture components
 feature_extractor = FeatureExtractor()
 gesture_segmenter = GestureSegmenter(
-    velocity_threshold=0.015,
-    hold_frames=3,
+    velocity_threshold=0.012,  # Lower = more sensitive to holds
+    hold_frames=4,              # Longer hold = more confident boundary
     max_gesture_frames=90
 )
-gesture_recognizer = GestureRecognizerV2(confidence_threshold=0.7)
+gesture_recognizer = GestureRecognizerV2(confidence_threshold=0.6)  # Lower = accept more matches
 translator = Translator()
 
 # Session state for continuous recognition
@@ -49,7 +49,7 @@ def translate():
             if is_boundary and gesture_frames:
                 result = gesture_recognizer.recognize(gesture_frames)
                 
-                if result['gesture'] and result['confidence'] >= 0.7:
+                if result['gesture'] and result['confidence'] >= 0.6:
                     recognized_gestures.append({
                         'gesture': result['gesture'],
                         'confidence': result['confidence']
@@ -106,7 +106,7 @@ def translate_continuous():
             if is_boundary and gesture_frames:
                 result = gesture_recognizer.recognize(gesture_frames)
                 
-                if result['gesture'] and result['confidence'] >= 0.7:
+                if result['gesture'] and result['confidence'] >= 0.6:
                     session_state['recognized_gestures'].append({
                         'gesture': result['gesture'],
                         'confidence': result['confidence']
@@ -140,6 +140,29 @@ def stats():
         return jsonify(stats)
     
     except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/translate-sentence', methods=['POST'])
+def translate_sentence():
+    """Translate word sequence to natural English"""
+    try:
+        data = request.json
+        words = data.get('words', [])
+        
+        if not words:
+            return jsonify({'error': 'No words provided'}), 400
+        
+        # Use translator to convert to natural English
+        translation = translator.translate_to_english(words)
+        
+        return jsonify({
+            'translation': translation,
+            'words': words,
+            'word_count': len(words)
+        })
+    
+    except Exception as e:
+        print(f"[ERROR] Error in /api/translate-sentence: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 @app.route('/api/health', methods=['GET'])
