@@ -16,13 +16,20 @@ class GestureRecognizerV2:
     
     def load_templates(self):
         """Load gesture templates from database"""
-        db_path = Path(__file__).parent / 'data' / 'gesture_templates_v2.json'
+        # Try filtered templates first (15 distinct signs)
+        db_path_filtered = Path(__file__).parent / 'data' / 'gesture_templates_v2_filtered.json'
+        db_path_full = Path(__file__).parent / 'data' / 'gesture_templates_v2.json'
         
-        if db_path.exists():
-            with open(db_path, 'r') as f:
+        if db_path_filtered.exists():
+            print(f"[INFO] Loading FILTERED templates (distinct signs only)")
+            with open(db_path_filtered, 'r') as f:
+                return json.load(f)
+        elif db_path_full.exists():
+            print(f"[WARN] Using FULL templates (105 signs - expect lower accuracy)")
+            with open(db_path_full, 'r') as f:
                 return json.load(f)
         
-        print(f"[WARN] Template database not found at {db_path}")
+        print(f"[WARN] Template database not found")
         return {}
     
     def recognize(self, gesture_frames):
