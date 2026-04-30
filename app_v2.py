@@ -16,7 +16,7 @@ gesture_segmenter = GestureSegmenter(
     hold_frames=4,              # Longer hold = more confident boundary
     max_gesture_frames=90
 )
-gesture_recognizer = GestureRecognizerV2(confidence_threshold=0.6)  # Lower = accept more matches
+gesture_recognizer = GestureRecognizerV2(confidence_threshold=0.75)  # Raised from 0.6 based on deep analysis
 translator = Translator()
 
 # Session state for continuous recognition
@@ -49,7 +49,7 @@ def translate():
             if is_boundary and gesture_frames:
                 result = gesture_recognizer.recognize(gesture_frames)
                 
-                if result['gesture'] and result['confidence'] >= 0.6:
+                if result['gesture'] and result['confidence'] >= 0.75:
                     recognized_gestures.append({
                         'gesture': result['gesture'],
                         'confidence': result['confidence']
@@ -106,7 +106,7 @@ def translate_continuous():
             if is_boundary and gesture_frames:
                 result = gesture_recognizer.recognize(gesture_frames)
                 
-                if result['gesture'] and result['confidence'] >= 0.6:
+                if result['gesture'] and result['confidence'] >= 0.75:
                     session_state['recognized_gestures'].append({
                         'gesture': result['gesture'],
                         'confidence': result['confidence']

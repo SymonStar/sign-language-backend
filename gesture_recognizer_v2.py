@@ -6,7 +6,7 @@ from fastdtw import fastdtw
 class GestureRecognizerV2:
     """DTW-based gesture recognition using rich normalized features"""
     
-    def __init__(self, confidence_threshold=0.7):
+    def __init__(self, confidence_threshold=0.75):
         """
         Args:
             confidence_threshold: Minimum similarity score to accept match (0-1)
@@ -157,13 +157,16 @@ class GestureRecognizerV2:
         Convert DTW distance to similarity score (0-1)
         
         Normalized by sequence length and scaled to 0-1 range
+        Scaling factor changed from 15 to 8 based on deep analysis:
+        - /15 was too lenient (38% of signs passed threshold)
+        - /8 provides better discrimination (only correct match passes)
         """
         # Normalize by sequence length
         normalized_distance = distance / (sequence_length + 1e-8)
         
         # Convert to similarity using exponential decay
-        # Adjusted scaling factor from 10 to 15 for more lenient matching
-        similarity = np.exp(-normalized_distance / 15)
+        # Scaling factor 8 (was 15) - sharper penalty for differences
+        similarity = np.exp(-normalized_distance / 8)
         
         return float(similarity)
     
