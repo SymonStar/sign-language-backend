@@ -42,8 +42,10 @@ class GestureRecognizerV2:
         Returns:
             dict: {'gesture': name, 'confidence': score, 'all_scores': {...}}
         """
-        if not gesture_frames or len(gesture_frames) < 5:
-            print(f"[DEBUG] Too few frames: {len(gesture_frames) if gesture_frames else 0}")
+        MIN_FRAMES = 10  # Require minimum frames for reliable matching
+        
+        if not gesture_frames or len(gesture_frames) < MIN_FRAMES:
+            print(f"[DEBUG] Too few frames: {len(gesture_frames) if gesture_frames else 0} < {MIN_FRAMES}")
             return {'gesture': None, 'confidence': 0, 'all_scores': {}}
         
         # Convert frames to feature vectors
@@ -65,8 +67,12 @@ class GestureRecognizerV2:
                 # DTW distance
                 distance, _ = fastdtw(feature_sequence, template_sequence, dist=self._euclidean_dist)
                 
-                # Convert distance to similarity score (0-1, higher is better)
-                similarity = self._distance_to_similarity(distance, len(feature_sequence))
+                # Convert distance to similarity with length penalty
+                similarity = self._distance_to_similarity(
+                    distance, 
+                    len(feature_sequence),
+                    len(template_sequence)
+                )
                 
                 # Keep best score for this gesture
                 if gesture_name not in scores or similarity > scores[gesture_name]:
@@ -152,21 +158,26 @@ class GestureRecognizerV2:
         """Euclidean distance between two feature vectors"""
         return np.linalg.norm(np.array(vec1) - np.array(vec2))
     
-    def _distance_to_similarity(self, distance, sequence_length):
+    def _distance_to_similarity(self, distance, sequence_length, template_length):
         """
         Convert DTW distance to similarity score (0-1)
         
-        Normalized by sequence length and scaled to 0-1 range
-        Scaling factor changed from 15 to 8 based on deep analysis:
-        - /15 was too lenient (38% of signs passed threshold)
-        - /8 provides better discrimination (only correct match passes)
+        Includes penalty for frame count mismatch to prevent short sequences
+        from matching longer ones too easily.
         """
         # Normalize by sequence length
         normalized_distance = distance / (sequence_length + 1e-8)
         
+        # Penalty for length mismatch (prevents 5-frame matching 8-frame)
+        length_ratio = abs(sequence_length - template_length) / max(sequence_length, template_length)
+        length_penalty = length_ratio * 1.5  # Adjust multiplier as needed
+        
+        # Apply penalty
+        adjusted_distance = normalized_distance + length_penalty
+        
         # Convert to similarity using exponential decay
-        # Scaling factor 8 (was 15) - sharper penalty for differences
-        similarity = np.exp(-normalized_distance / 8)
+        # Scaling factor 8 - sharper penalty for differences
+        similarity = np.exp(-adjusted_distance / 8)
         
         return float(similarity)
     

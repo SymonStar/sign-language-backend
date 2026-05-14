@@ -198,11 +198,20 @@ class FeatureExtractor:
         middle_base = landmarks[9]
         hand_size = euclidean(wrist, middle_base)
         
+        # Validation: hand_size should be reasonable
+        if hand_size < 0.01:  # Too small, use alternative
+            # Use wrist to middle fingertip as reference
+            middle_tip = landmarks[12]
+            hand_size = euclidean(wrist, middle_tip)
+        
+        if hand_size < 0.01:  # Still too small, return zeros
+            return [0.0] * 5
+        
         distances = []
         for tip_idx in fingertips:
             tip = landmarks[tip_idx]
             dist = euclidean(wrist, tip)
-            normalized_dist = dist / (hand_size + 1e-8)
+            normalized_dist = dist / hand_size
             distances.append(float(normalized_dist))
         
         return distances
