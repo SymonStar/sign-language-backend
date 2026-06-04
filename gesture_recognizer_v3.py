@@ -17,51 +17,44 @@ class GestureRecognizerV3:
     
     def load_templates(self):
         """Load gesture templates from database (supports compressed .gz files)"""
-        # Try optimized compressed V3 templates first (smallest)
+        # Try FIXED optimized compressed V3 templates first
+        db_path_v3_fixed_gz = Path(__file__).parent / 'data' / 'gesture_templates_v3_fixed_optimized.json.gz'
+        db_path_v3_fixed = Path(__file__).parent / 'data' / 'gesture_templates_v3_fixed_optimized.json'
+        # Fallback to old paths
         db_path_v3_opt_gz = Path(__file__).parent / 'data' / 'gesture_templates_v3_optimized.json.gz'
-        db_path_v3_opt = Path(__file__).parent / 'data' / 'gesture_templates_v3_optimized.json'
-        # Try compressed V3 templates
-        db_path_v3_gz = Path(__file__).parent / 'data' / 'gesture_templates_v3.json.gz'
-        db_path_v3 = Path(__file__).parent / 'data' / 'gesture_templates_v3.json'
         db_path_v2 = Path(__file__).parent / 'data' / 'gesture_templates_v2_filtered.json'
         
-        # Try optimized compressed V3
+        # Try FIXED compressed
+        if db_path_v3_fixed_gz.exists():
+            print(f"[INFO] Loading FIXED V3 optimized compressed templates (54 features)")
+            try:
+                with gzip.open(db_path_v3_fixed_gz, 'rt', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"[ERROR] Failed to load compressed templates: {e}")
+        
+        # Try FIXED uncompressed
+        if db_path_v3_fixed.exists():
+            print(f"[INFO] Loading FIXED V3 optimized templates (54 features)")
+            with open(db_path_v3_fixed, 'r') as f:
+                return json.load(f)
+        
+        # Try old compressed (48 features - WRONG)
         if db_path_v3_opt_gz.exists():
-            print(f"[INFO] Loading optimized compressed V3 templates (with zero-masking)")
+            print(f"[WARN] Loading OLD V3 templates (48 features - WRONG!)")
             try:
                 with gzip.open(db_path_v3_opt_gz, 'rt', encoding='utf-8') as f:
                     return json.load(f)
             except Exception as e:
                 print(f"[ERROR] Failed to load compressed templates: {e}")
         
-        # Try optimized uncompressed V3
-        if db_path_v3_opt.exists():
-            print(f"[INFO] Loading optimized V3 templates (with zero-masking)")
-            with open(db_path_v3_opt, 'r') as f:
-                return json.load(f)
-        
-        # Try compressed V3
-        if db_path_v3_gz.exists():
-            print(f"[INFO] Loading compressed V3 templates (with zero-masking)")
-            try:
-                with gzip.open(db_path_v3_gz, 'rt', encoding='utf-8') as f:
-                    return json.load(f)
-            except Exception as e:
-                print(f"[ERROR] Failed to load compressed templates: {e}")
-        
-        # Try uncompressed V3
-        if db_path_v3.exists():
-            print(f"[INFO] Loading V3 templates (with zero-masking)")
-            with open(db_path_v3, 'r') as f:
-                return json.load(f)
-        
-        # Fallback to V2
+        # Fallback to V2 (54 features but only 4 frames)
         if db_path_v2.exists():
-            print(f"[WARN] Using V2 templates (no zero-masking)")
+            print(f"[WARN] Using V2 templates (4 frames each)")
             with open(db_path_v2, 'r') as f:
                 return json.load(f)
         
-        print(f"[WARN] Template database not found")
+        print(f"[ERROR] No template database found")
         return {}
     
     def recognize(self, gesture_frames):
@@ -290,8 +283,11 @@ class GestureRecognizerV3:
     
     def get_stats(self):
         """Get statistics about loaded templates"""
+        total_templates = sum(len(data['templates']) for data in self.templates.values())
+        
         stats = {
-            'total_gestures': len(self.templates),
+            'total_templates': total_templates,
+            'unique_signs': len(self.templates),
             'gestures': {}
         }
         
