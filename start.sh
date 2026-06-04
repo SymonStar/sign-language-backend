@@ -1,8 +1,8 @@
 #!/bin/bash
-# Filtered templates are now in the repo (small enough for GitHub)
-# No need to download from Google Drive
+# V3 optimized compressed templates (4.3MB)
+# Auto-loads gesture_templates_v3_optimized.json.gz
 
-echo "[OK] Using filtered templates from repo"
+echo "[OK] Using V3 optimized compressed templates"
 
 # Start the app
-gunicorn app_v2:app
+gunicorn app_v3:app
