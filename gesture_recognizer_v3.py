@@ -96,28 +96,19 @@ class GestureRecognizerV3:
             for template_idx, template in enumerate(template_data['templates']):
                 template_sequence = np.array(template['feature_sequence'])
                 
-                # Check if template has mask (V3 with masks) or not (optimized V3 or V2)
-                if 'mask_sequence' in template:
-                    template_mask = np.array(template['mask_sequence'], dtype=bool)
-                    use_masking = True
-                else:
-                    # Compute mask on-the-fly from feature_sequence
-                    template_mask = self._compute_mask_from_features(template_sequence)
-                    use_masking = True
+                # Compute mask on-the-fly from feature_sequence
+                template_mask = self._compute_mask_from_features(template_sequence)
                 
-                # DTW distance with optional masking
-                if use_masking:
-                    distance, _ = fastdtw(
-                        feature_sequence, 
-                        template_sequence, 
-                        dist=lambda a, b: self._masked_euclidean_dist(
-                            a, b, 
-                            mask_sequence[min(len(mask_sequence)-1, len(feature_sequence)-1)],
-                            template_mask[min(len(template_mask)-1, len(template_sequence)-1)]
-                        )
-                    )
-                else:
-                    distance, _ = fastdtw(feature_sequence, template_sequence, dist=self._euclidean_dist)
+                # Create wrapped sequences (features + masks bundled)
+                wrapped_sequence = [(feature_sequence[i], mask_sequence[i]) for i in range(len(feature_sequence))]
+                wrapped_template = [(template_sequence[i], template_mask[i]) for i in range(len(template_sequence))]
+                
+                # DTW distance with masking
+                distance, _ = fastdtw(
+                    wrapped_sequence, 
+                    wrapped_template, 
+                    dist=self._wrapped_distance
+                )
                 
                 # Convert distance to similarity with length penalty
                 similarity = self._distance_to_similarity(
@@ -230,6 +221,12 @@ class GestureRecognizerV3:
             masks.append(mask)
         
         return np.array(masks, dtype=bool)
+    
+    def _wrapped_distance(self, wrapped1, wrapped2):
+        """Distance function for wrapped (feature, mask) tuples"""
+        vec1, mask1 = wrapped1
+        vec2, mask2 = wrapped2
+        return self._masked_euclidean_dist(vec1, vec2, mask1, mask2)
     
     def _masked_euclidean_dist(self, vec1, vec2, mask1, mask2):
         """
