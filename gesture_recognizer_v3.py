@@ -1,4 +1,5 @@
 import json
+import gzip
 import numpy as np
 from pathlib import Path
 from fastdtw import fastdtw
@@ -15,16 +16,47 @@ class GestureRecognizerV3:
         self.confidence_threshold = confidence_threshold
     
     def load_templates(self):
-        """Load gesture templates from database"""
-        # Try V3 templates first
+        """Load gesture templates from database (supports compressed .gz files)"""
+        # Try optimized compressed V3 templates first (smallest)
+        db_path_v3_opt_gz = Path(__file__).parent / 'data' / 'gesture_templates_v3_optimized.json.gz'
+        db_path_v3_opt = Path(__file__).parent / 'data' / 'gesture_templates_v3_optimized.json'
+        # Try compressed V3 templates
+        db_path_v3_gz = Path(__file__).parent / 'data' / 'gesture_templates_v3.json.gz'
         db_path_v3 = Path(__file__).parent / 'data' / 'gesture_templates_v3.json'
         db_path_v2 = Path(__file__).parent / 'data' / 'gesture_templates_v2_filtered.json'
         
+        # Try optimized compressed V3
+        if db_path_v3_opt_gz.exists():
+            print(f"[INFO] Loading optimized compressed V3 templates (with zero-masking)")
+            try:
+                with gzip.open(db_path_v3_opt_gz, 'rt', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"[ERROR] Failed to load compressed templates: {e}")
+        
+        # Try optimized uncompressed V3
+        if db_path_v3_opt.exists():
+            print(f"[INFO] Loading optimized V3 templates (with zero-masking)")
+            with open(db_path_v3_opt, 'r') as f:
+                return json.load(f)
+        
+        # Try compressed V3
+        if db_path_v3_gz.exists():
+            print(f"[INFO] Loading compressed V3 templates (with zero-masking)")
+            try:
+                with gzip.open(db_path_v3_gz, 'rt', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception as e:
+                print(f"[ERROR] Failed to load compressed templates: {e}")
+        
+        # Try uncompressed V3
         if db_path_v3.exists():
             print(f"[INFO] Loading V3 templates (with zero-masking)")
             with open(db_path_v3, 'r') as f:
                 return json.load(f)
-        elif db_path_v2.exists():
+        
+        # Fallback to V2
+        if db_path_v2.exists():
             print(f"[WARN] Using V2 templates (no zero-masking)")
             with open(db_path_v2, 'r') as f:
                 return json.load(f)
@@ -64,13 +96,14 @@ class GestureRecognizerV3:
             for template_idx, template in enumerate(template_data['templates']):
                 template_sequence = np.array(template['feature_sequence'])
                 
-                # Check if template has mask (V3) or not (V2)
+                # Check if template has mask (V3 with masks) or not (optimized V3 or V2)
                 if 'mask_sequence' in template:
                     template_mask = np.array(template['mask_sequence'], dtype=bool)
                     use_masking = True
                 else:
-                    template_mask = None
-                    use_masking = False
+                    # Compute mask on-the-fly from feature_sequence
+                    template_mask = self._compute_mask_from_features(template_sequence)
+                    use_masking = True
                 
                 # DTW distance with optional masking
                 if use_masking:
@@ -182,6 +215,21 @@ class GestureRecognizerV3:
         vector.append(hand_features['palm_normal'][2])
         
         return vector
+    
+    def _compute_mask_from_features(self, feature_sequence):
+        """Compute mask from feature values (True if hand present, False if all zeros)"""
+        masks = []
+        for frame in feature_sequence:
+            frame_arr = np.array(frame)
+            # Left hand (features 0-26)
+            left_has_data = np.any(frame_arr[:27] != 0)
+            # Right hand (features 27-53)
+            right_has_data = np.any(frame_arr[27:54] != 0)
+            
+            mask = [left_has_data] * 27 + [right_has_data] * 27
+            masks.append(mask)
+        
+        return np.array(masks, dtype=bool)
     
     def _masked_euclidean_dist(self, vec1, vec2, mask1, mask2):
         """
