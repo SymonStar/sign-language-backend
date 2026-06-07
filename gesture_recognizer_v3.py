@@ -18,10 +18,10 @@ class GestureRecognizerV3:
     def load_templates(self):
         """Load gesture templates from database (supports compressed .gz files)"""
         # Try FIXED optimized compressed V3 templates first
-        db_path_v3_fixed_gz = Path(__file__).parent / 'data' / 'gesture_templates_v3_fixed_optimized.json.gz'
-        db_path_v3_fixed = Path(__file__).parent / 'data' / 'gesture_templates_v3_fixed_optimized.json'
+        # db_path_v3_fixed_gz = Path(__file__).parent / 'data' / 'gesture_templates_v3_fixed_optimized.json.gz'
+        # db_path_v3_fixed = Path(__file__).parent / 'data' / 'gesture_templates_v3_fixed_optimized.json'
         # Fallback to old paths
-        db_path_v3_opt_gz = Path(__file__).parent / 'data' / 'gesture_templates_v3_optimized.json.gz'
+        # db_path_v3_opt_gz = Path(__file__).parent / 'data' / 'gesture_templates_v3_optimized.json.gz'
         db_path_v2 = Path(__file__).parent / 'data' / 'gesture_templates_v2_filtered.json'
         
         # Try FIXED compressed
